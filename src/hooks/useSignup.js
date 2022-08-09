@@ -9,7 +9,7 @@ export const useSignup = () => {
     const signup = async (email, password) => {
         setLoading(true);
         setError(null);
-        const response = await fetch('https://grocery-pal.herokuapp.com/api/user/signup', {
+        const response = await fetch('/api/user/signup', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})
