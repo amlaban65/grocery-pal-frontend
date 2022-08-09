@@ -8,7 +8,7 @@ const Home = () => {
     const {user} = useAuthContext();
     useEffect(() => {
         const fetchGroceries = async () => {
-            const response = await fetch('/api/grocery', {
+            const response = await fetch('https://grocery-pal.herokuapp.com/api/grocery', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
