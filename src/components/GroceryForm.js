@@ -19,7 +19,7 @@ const GroceryForm = () => {
         }
         const grocery = {name, quantity, tags, calories, notes};
 
-        const response = await fetch("https://grocery-pal.herokuapp.com/api/grocery", {
+        const response = await fetch("/api/grocery", {
             method: "POST",
             body: JSON.stringify(grocery),
             headers: {

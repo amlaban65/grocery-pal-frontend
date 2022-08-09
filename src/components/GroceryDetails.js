@@ -7,7 +7,7 @@ const GroceryDetails = ({ grocery }) => {
     const {user} = useAuthContext();
     const handleClick = async () => {
         if (!user) return;
-        const response = await fetch("https://grocery-pal.herokuapp.com/api/grocery/"+ grocery._id,
+        const response = await fetch("/api/grocery/"+ grocery._id,
         {method: "DELETE",
     headers: {
         'Authorization': `Bearer ${user.token}`
